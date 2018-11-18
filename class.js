@@ -15,7 +15,7 @@ class Dog extends Animal{
     console.log(`${this.name} can bark.`);
   }
 }
-
+ 
 var hashiqi = new Dog('hashiqi');
 hashiqi.eat()
 hashiqi.bark()

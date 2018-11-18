@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <style>
+  html *{margin:0;padding:0;}
+  .total{
+    background: pink;
+  }
+  .item1{
+    float:left;
+    background:red;
+    width:50px;
+    height:50px;
+  }
+  .item2{
+    height:100px;
+    background:yellow;
+    overflow: auto;  /*这里不设置会溢出 */
+  }
+  </style>
+</head>
+<body>
+  <div class="total">
+    <div class="item item1">b</div>
+    <div class="item item2">这里设置overflow: auto不会溢出 </div>
+  </div>
+</body>
+</html>
