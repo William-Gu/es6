@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <script src="main.js"></script>
+</head>
+<body>
+  <button id="btn1">扫一扫</button>
+  <button id="btn2">分享</button>
+  <button id="btn3">登陆</button>
+  <script type='text/javascript' src='./js/schema.js'></script>
+  <script>
+    document.getElementById('btn1').addEventListener('click',function(){
+      window.invoke.scan()
+    })
+    document.getElementById('btn2').addEventListener('click',function(){
+      window.invoke.share({title: 'xxx', content: 'yyy'},function(res){
+        
+      })
+    })
+    document.getElementById('btn3').addEventListener('click',function(){
+      window.invoke.login()
+    })
+  </script>
+</body>
+</html>
+
