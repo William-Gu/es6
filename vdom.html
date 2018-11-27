@@ -1,1 +1,26 @@
-vdom.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vdom</title>
+    <script src='./js/util.js'></script>
+    <script src='./js/vElement.js'></script>
+    <script src='./js/diff.js'></script>
+</head>
+<body>
+<div id="app"></div>
+<script>
+
+var vdom = VElement('div', { 'id': 'content' }, [
+  VElement('div', { style: 'color:red' }, ['simple virtual dom']),
+  VElement('p', ['hello world']),
+  VElement('ul', [VElement('li', ['item #1']), VElement('li', ['item #2'])]),
+]);
+console.log(vdom);
+document.querySelector('#app').appendChild(vdom.render())
+<!-- https://github.com/foio/vdom-demo -->
+</script>
+</body>
+</html>
