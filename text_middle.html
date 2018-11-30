@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+<style>
+.app,
+.app1,
+.app2{
+  float:left;
+  border:1px solid #666;
+}
+</style>
+</head>
+<body>
+  <style>
+  .app{position: relative;width:300px;height:200px;}
+  .content{
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  </style>
+  <div class="app">
+    <div class="content">这个垂直居中用的 position</div>
+  </div>
+  <style>
+  .app1{
+    display: table;
+    width:300px;
+    height:200px;
+  }
+  .app1 .content1{
+    display: table-cell;vertical-align:middle; text-align:center;
+  }
+  </style>
+  <div class="app1">
+    <div class="content1">这个垂直居中用的 table</div>
+  </div>
+        
+  <style>
+  .app2 {
+    background: #ccc;
+    width:300px;height:200px;
+    line-height: 200px;
+  }
+  .app2 .content2{
+    display: inline-block;
+    line-height: 20px;
+    vertical-align: middle;
+  }
+  </style>
+  <div class="app2">
+    <div class="content2">这种垂直居中用的 line-height + inline-block</div>
+  </div>
+</body>
+</html>
