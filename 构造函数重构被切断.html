@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prototype Pattern Example</title>
+    <script type="text/javascript">             
+        function Per(){};
+        Per.prototype = {
+            constructor: Per,
+            name : "Nicholas",
+            age : 29,
+            job : "Software Engineer",
+            sayName : function () {
+                alert(this.name);
+            }
+        };
+        var fri = new Per();
+        fri.sayName();   //Nicholas
+        /*****/
+        function Person(){};
+        Person.prototype.sayName=function(){console.log('right?')};
+        
+        var friend = new Person();
+        Person.prototype = {
+            constructor: Person,
+            name : "Nicholas",
+            age : 29,
+            job : "Software Engineer",
+            sayName : function () {
+                alert(this.name);
+            }
+        };
+        
+        friend.sayName();   //right?
+        var friend = new Person();
+        friend.sayName();	//Nicholas
+
+        
+    </script>
+</head>
+<body>
+
+</body>
+</html>

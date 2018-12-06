@@ -1,0 +1,56 @@
+
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Author" content="William-Gu">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style type='text/css'>
+/* 	div{border:1px solid red; width:100px;height:100px;float:left} */
+
+#parent{border:1px solid red;position: absolute}
+  </style>
+  <script>
+  
+  </script>
+ </head>
+ <body>
+	<div style='width:500px;height:500px' id='parent'>
+		<div style='width:100px;height:100px;border:1px solid blue;margin:0 auto' id='child'></div>
+	</div>
+
+
+ <script>
+	 window.onload=function(){  
+                 changeDivHeight();  
+     }
+     window.onresize=function(){  
+                 changeDivHeight();  
+     }    
+	var a=document.getElementsByTagName('div')[0];
+	var b=document.getElementById('child');
+	
+     function changeDivHeight(){
+		var x=document.documentElement.clientWidth;
+		var y=document.documentElement.clientHeight; 
+		var ax=a.style.width=x/2+'px';
+		var ay=a.style.height=y/2+'px';
+		a.style.top=(y-y/2)/2+'px';
+		a.style.left=(x-x/2)/2+'px';
+		
+		
+		var w=parseInt(b.style.width);
+		var h=parseInt(b.style.height);
+		var pw=parseInt(a.style.width);
+		var ph=parseInt(a.style.height);
+		b.style.marginTop=(ph-h)/2+'px';
+		b.style.width=pw/2+'px';
+		b.style.height=ph/2+'px';
+
+	 }
+  
+  </script>
+ </body>
+</html>

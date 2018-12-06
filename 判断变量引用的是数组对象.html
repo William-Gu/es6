@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<title>....</title>
+<meta type="generator" content="editplus"/>
+<meta type="author" content=""/>
+<meta type="keywords" content=""/>
+<meta type="description" content=""/>
+<meta charset="utf-8"/>
+<head>
+ <style type='text/css'> </style>
+  <script>
+  /*
+如何判断变量引用的是数组对象：几种
+   1. typeof(): 对数组类型无效
+   2. 对象 instanceof 构造函数名：有效！
+        *对象的原型链中是否包含指定构造函数的原型*
+        *判断对象是否由指定构造函数创建——不严谨*
+   3. 调用Object.prototype中的toString方法
+        1. 先找到要调用的目标方法
+           Object.prototype.toString
+        2. 使用call临时替换调用toString方法的对象为数组
+           Object.prototype.toString.call(arr);
+      其中call：在调用方法时，临时更改调用方法的对象   
+	*/
+var arr='sss';
+ console.log(Object.prototype.toString(arr))		//[object Object]
+ console.log(Object.prototype.toString.call(arr))	//[object String]
+var a=['a','b','c']
+ console.log(Object.prototype.toString(a))			//[object Object]
+ console.log(Object.prototype.toString.call(a))		//[object Array]
+ console.log(arr)									//sss
+console.log(arr instanceof Array);  				//false
+console.log(a instanceof Array);					//true
+//4. ES5:Array.isArray(arr); 问题：兼容性不好
+//总结：3+4
+   function checkArray(arr){
+   	if(typeof(Array.isArray)==="function"){
+       	    return Array.isArray(arr);
+        }else{
+            return Object.prototype.toString.call(arr)==="[object Array]";
+        }
+   }
+
+ </script>
+
+</head>
+<body>
+ 
+</body>
+</html>

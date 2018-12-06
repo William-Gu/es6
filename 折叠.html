@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<title>....</title>
+<meta type="generator" content="editplus"/>
+<meta type="author" content=""/>
+<meta type="keywords" content=""/>
+<meta type="description" content=""/>
+<meta charset="utf-8"/>
+<head>
+ <style type='text/css'>
+ li{list-style-type:square}
+	.show{display:block}
+	.hide{display:none}
+ </style>
+  <script>
+ </script>
+</head>
+<body>
+		<ul>
+			<li><a href='#' onclick='showUL(this)'>新闻管理</a>
+				<ul class='hide'>
+					<li>确认</li>
+					<li>删除</li>
+					<li>搜索</li>
+				</ul>
+			</li>
+		</ul>
+		<ul>
+			<li><a href='#' onclick='showUL(this)'>员工管理</a>
+				<ul class='hide'>
+					<li>确认1</li>
+					<li>删除2</li>
+					<li>搜索3</li>
+				</ul></li>
+		</ul>
+		<ul>
+			<li><a href='#' onclick='showUL(this)'>考勤管理</a>
+				<ul class='hide'>
+					<li>确认4</li>
+					<li>删除5</li>
+					<li>搜索6</li>
+				</ul></li>
+		</ul>
+	<script>
+		function showUL(anchor){		
+			var show1=document.getElementsByClassName('show');
+			if(show1.length!=0){show1[0].setAttribute('class','hide');}
+			var ul=anchor.parentNode.querySelector('ul');
+			ul.setAttribute('class','show');
+		}
+	</script>
+</body>
+</html>

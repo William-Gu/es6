@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<title>....</title>
+<meta type="generator" content="editplus"/>
+<meta type="author" content=""/>
+<meta type="keywords" content=""/>
+<meta type="description" content=""/>
+<meta charset="utf-8"/>
+<head>
+ <style type='text/css'> </style>
+  <script>
+
+//		验证身份证号码
+//		/\d{15}(\d\d[0-9xX])?/
+
+//验证手机号
+ //		/((\+86)|(0086))?\s*1[34578]\d{9}/
+ 
+ //验证网址
+ //		/<a(.*?)href\s*=\s*['"]([^'"]*)['"](.*?)/
+
+ //四舍五入函数
+ 	function round(num,d){
+		num*=Math.pow(10,d);
+		num=Math.round(num);
+		num/=Math.pow(10,d)
+		return num;
+	}
+
+  /*************验证数组顺序、倒序*********/
+	var arr=[1,44,2,5,8,6,3,7];
+		console.log(arr.sort());
+	//	function compare(a,b){return a-b};
+	//var compare=function(a,b){return a-b};
+	//var compare=new Function('a','b','return a-b');
+	//console.log(arr.sort(compare));
+
+/********验证是否为空*******/
+	function isEmpty(str){
+		var reg=/^\s*$/;
+		if(str==null){
+			return true;
+		}else if(reg.text(str)){
+			return true;
+		}else{
+			return false;
+		}
+	}
+ console.log(isEmpty(null))
+
+ /************去除字符串开头空格***************/
+ function Itrim(str){
+	return str.replace(/^\s+/,'');
+ }
+console.log(Itrim('  gg dd  '))
+ /***********去除字符串结尾空格*****************/
+ function rtrim(str){
+	return str.replace(/\s+$/,'');
+ }
+ console.log(rtrim('  gg dd  '))
+ /*********去除字符串开头和结尾空格************/
+ function trim(str){
+	return str.replace(/^\s+|\s+$/g,'');
+ }
+ console.log(trim(' gg dd     '))
+
+//
+ </script>
+
+</head>
+<body>
+ 
+</body>
+</html>

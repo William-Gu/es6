@@ -1,0 +1,36 @@
+
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Author" content="William-Gu">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style type='text/css'>
+	
+  </style>
+
+ </head>
+ <body>
+  <div id="a">
+  	让不让我变红？
+  </div>
+  </br>
+ 
+  	<input type='checkbox' id='check' ></input>
+  <script>
+	  
+  var a=document.getElementById('a');
+  var check=document.getElementById('check')
+  a.onmouseover=function(){
+  	if(check.checked){
+		 a.style.color='red' 
+  	}
+  }
+  a.onmouseout=function(){
+		 a.style.color='black' 
+  }
+  </script>
+ </body>
+</html>
